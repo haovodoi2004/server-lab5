@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Optional: Add your custom styles here */
+        .form-container {
+            margin-top: 50px;
+        }
+
+        .table-container {
+            margin-top: 50px;
+        }
+
+        .fruit-image img {
+            width: 200px;
+            /* Thay đổi kích thước theo nhu cầu */
+            height: auto;
+            /* Giữ tỷ lệ khung hình */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>Quản lý hàng hóa</h1>
+
+
+        <div class="form-container">
+            <form id="form-fruit" method="POST">
+                <input type="hidden" id="idFruit">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Name:</label>
+                    <input type="number" class="form-control" id="quantity" name="quantity"
+                        placeholder="Enter quantity">
+                </div>
+                <div class="form-group">
+                    <label for="price">price:</label>
+                    <input type="number" class="form-control" id="price" name="price" placeholder="Enter price">
+                </div>
+                <div class="form-group">
+                    <label for="status">status:</label>
+                    <input type="text" class="form-control" id="status" name="status" placeholder="Enter status">
+                </div>
+
+                <div class="form-group">
+                    <label for="image">image:</label>
+                    <input type="file" id="image" name="image" placeholder="Enter image" multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">description:</label>
+                    <input type="text" class="form-control" id="description" name="description"
+                        placeholder="Enter description">
+                </div>
+                <div class="form-group">
+                    <label for="id_distributor">id_distributor:</label>
+                    <input type="text" class="form-control" id="id_distributor" name="id_distributor"
+                        placeholder="Enter id_distributor">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="table-container">
+            <h2>Danh sách hàng hóa</h2>
+            <table id="list-fruit" class="table table-border">
+            </table>
+        </div>
+    </div>
+    <script src="/javascripts/fruitManagement.js"></script>
+</body>
+
+</html>
